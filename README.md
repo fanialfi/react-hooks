@@ -1,8 +1,9 @@
-# React + Vite
+# react costom hooks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+untuk penamaan custom hooks, namanya harus diawali dengan kata `use` lalu diikuti dengan huruf kapital,
+seperti `useState`, `useEffect` (built-in) atau `useOnlineStatus` (custom),
 
-Currently, two official plugins are available:
+sebuah custom hooks juga bisa mengembalikan sebuah arbitrary value ataupun juga bisa tidak mengembalikan arbitrary value
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+jika di sebuah project ada linter yang dikonfigurasi untuk project react, ketika mengganti custom hooks `useOnlineStatus` menjadi `getOnlineStatus` linter tidak akan mengizinkan pemanggilan `useState` dan `useEffect`.
+Hal ini akan membantu developer untuk membedakan mana yang custom hooks dan mana yang bukan
